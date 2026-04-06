@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100vw;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont,
+               'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+               'Helvetica Neue', Arial, sans-serif;
+}
+
+.table-container {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: fit-content;
+  margin-top: 50px;
+}
+
+.pre-table {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-titre {
+  font-size: 35px;
+  margin: 20px 0;
+}
+
+.ajt-btn {
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+
+  background-color: #36304A;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  transition: background-color 0.2s ease,
+              transform 0.15s ease,
+              box-shadow 0.15s ease;
+}
+
+.ajt-btn:hover {
+  background-color: #4b4566;
+  box-shadow: 0 3px 7px rgba(54, 48, 74, 0.3);
+}
+
+.ajt-btn:active {
+  transform: scale(0.97);
+}
+
+
+.table-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.livre-table {
+  border-collapse: collapse;
+}
+
+.livre-table tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.livre-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.livre-table tbody tr:hover {
+  background-color: #e5e7eb;
+}
+
+.livre-table th {
+  background-color: #36304A;
+  color: #fff;
+  padding: 10px 50px;
+}
+
+.livre-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  width: 420px;
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: modalFade 0.25s ease;
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-header {
+  padding: 18px 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #666;
+}
+
+.close-btn:hover {
+  color: #ef4444;
+}
+
+.modal-form {
+  padding: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.form-group input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #36304A;
+  box-shadow: 0 0 0 2px rgba(54, 48, 74, 0.15);
+}
+
+.modal-footer {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.btn.confirm {
+  background: #36304A;
+  color: #fff;
+}
+
+.btn.confirm:hover {
+  background: #4b4566;
+}
+
+.btn.cancel {
+  background: #e5e7eb;
+}
+
+.btn.cancel:hover {
+  background: #d1d5db;
+}
+
+.action-cell {
+  white-space: nowrap;
+}
+
+.row-btn {
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-right: 6px;
+
+  transition: background-color 0.15s ease,
+              color 0.15s ease,
+              box-shadow 0.15s ease,
+              transform 0.1s ease;
+}
+
+.row-btn:active {
+  transform: scale(0.95);
+}
+
+
+.edit-btn {
+  background-color: rgba(54, 48, 74, 0.1);
+  color: #36304A;
+}
+
+.edit-btn:hover {
+  background-color: #36304A;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(54, 48, 74, 0.3);
+}
+
+.delete-btn {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.delete-btn:hover {
+  background-color: #ef4444;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3);
+}
+
